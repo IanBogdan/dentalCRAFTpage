@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dentalCRAFT</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="functions.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRHfreQQkqHekIMfpVNVJzppV8QhFGpU4&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+ 
+</head>
+
+<body class="example" onload="init()">
+<div class="main_div">
+<div id="s1" class="screen_page blue">
+    <div class="head_info">
+        <img src="images/logo.svg" style="max-height: 35%; margin-left: 5%; margin-top: 1%;" />
+        <p class="head_text" style= "font-size:20px;"> Kontakt </p>
+        <p class="head_text" style= "font-size:20px;"> O nama </p>
+    </div>
+
+    <img src="images/hero.png" style="height: 65%; position: absolute; bottom: 0%; left: 10%" />
+    <img src="images/tooth.gif" style="height: 55%; position: absolute; left: 27%; top: 1%;" />
+
+    <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 30%;"> Vaši zubi </h1>
+    <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 17%;"> u pravim rukama </h1>
+    <button class="btn"> <b> Usluge </button>
+
+    <img id="tooth1" class = "tooth" src="images/broken_2.png"
+        style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth2" src="images/fix_1.png"
+        style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth3" src="images/new_1.png"
+        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+</div>
+
+<div id="s2" class="screen_page darkblue">
+    <h1 class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size:  80px;">Što radimo?</h1>
+
+    <div style="position: absolute; top: 29%; left: 12%; width: 15%; height: 50%; padding: 0%; margin: 0%;">
+        <img src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
+        <b>
+            <p class="prothetics_title" style="position: absolute; top: 32%; left: 7%; "> Fiksna protetika </p>
+        </b>
+        <p class="prothetics_paragraph"
+            style="position: absolute; top: 45%; text-align: justify; width: 100%"> Otkrijte bit restorativne stomatologije s našim zubnim krunicama i mostovima izrađenim po mjeri. 
+                Naše zubne krunice daju čvrstoću i estetsko poboljšanje oštećenim zubima, dok naši mostovi stručno nadomještaju nedostajuće zube sigurnim učvršćivanjem na susjedne zdrave zube ili zubne implantate. 
+                Izrađene od visokokvalitetnih materijala poput porculana i metalnih legura, naše protetike nude izdržljivost i prirodnu estetiku. </p>
+    </div>
+
+    <div style="position: absolute; top: 29%; left: 32%; width: 16%; height: 50%; padding: 0%; margin: 0%;">
+        <img src="images/mobilna2x.png" style="position: absolute; width: 100%;" />
+        <b>
+            <p class="prothetics_title" style="position: absolute; top: 32%; left: 5%; "> Mobilna protetika </p>
+        </b>
+        <p class="prothetics_paragraph"
+            style="position: absolute; top: 45%; text-align: justify; width: 100%;">
+            Mobilne proteze cjelovito su rješenje za one koji nemaju prirodne zube. Izrađene s preciznošću i korištenjem visokokvalitetnih materijala, nude prirodan izgled i udobno pristajanje.
+            Naš laboratorij daje prioritet preciznim mjerenjima i otiscima, osiguravajući savršeno pristajanje za vašu mobilnu zubnu protetiku. Računajte na nas da ćemo vam vratiti osmijeh i samopouzdanje, poboljšati ukupnu kvalitetu života. </p>
+    </div>
+
+
+    <div style="position: absolute; top: 29%; right: 32%; width: 15%; height: 50%; padding: 0%; margin: 0%;">
+        <img src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
+        <b>
+            <p class="prothetics_title" style="position: absolute; top: 32%; left: 10%; "> Implantologija </p>
+        </b>
+        <p class="prothetics_paragraph"
+            style="position: absolute; top: 45%; text-align: justify; width: 100%;">
+            Specijalizirani smo za rješenja za zubne implantate, nudeći vrhunski pristup
+            nadomještanju zuba. Zubni implantati zlatni su standard za obnavljanje zuba koji nedostaju, osiguravajući trajno
+            rješenje prirodnog izgleda. Naš tim koristi naprednu tehnologiju i tehnike kako bi osigurao precizno postavljanje i
+            optimalnu estetiku. Povjerite nam se za vrhunska rješenja za zubne
+            implantate jer nam je vaše oralno zdravlje i dobrobit prioritet. </p>
+    </div>
+
+    <div style="position: absolute; top: 29%; right: 11%; width: 16%; height: 50%; padding: 0%; margin: 0%;">
+        <img src="images/komb2x.png" style="position: absolute; width: 100%; height: 40%; left: -7%; top: -3%;" />
+        <b>
+            <p class="prothetics_title" style="position: absolute; top: 32%; "> Kombinirani radovi </p>
+        </b>
+        <p class="prothetics_paragraph"
+            style="position: absolute; top: 45%; text-align: justify; width: 100%;">
+            Ponosni smo na ponudu širokog spektra kombiniranih stomatoloških usluga za rješavanje svih vaših potreba za oralnim zdravljem na jednom mjestu. 
+            Bez obzira trebate li fiksnu protetiku, mobilnu zubnu protetiku, zubne implantate ili kombinaciju ovoga, mi vam možemo pomoći. 
+            Preciznim mjerenjima, preciznim otiscima i korištenjem visokokvalitetnih materijala, osiguravamo savršeno pristajanje, trajnost i prirodnu estetiku. </p>
+    </div>
+    <img id="tooth4" src="images/broken_1.png"
+        style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth5" class="tooth" src="images/fix_2.png"
+        style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth6" src="images/new_1.png"
+        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+</div>
+
+<div id="s3" class="screen_page blue">
+        <gmp-map center="46.4111328125,16.415279388427734" zoom="16" map-id="DEMO_MAP_ID" style="width: 40%;">
+            <gmp-advanced-marker position="46.4111328125,16.415279388427734">
+            </gmp-advanced-marker>
+        </gmp-map>
+        <table style="position: absolute; top: 50px; height: 55%; width: 35%; left: 52%; font-size: 19px; color: whitesmoke;">
+                    <caption>
+                        <h1 class="info_titles" style="font-size: 80px; color: whitesmoke;padding-top: 50px;">
+                        Kako do nas?</h1>
+                    </caption>
+              
+            <tr class="tr_info">
+                <td class="td_infoL" style="text-align: center; vertical-align: middle">
+                    <img src="images/pin.png" class = "info_pic">
+                </td>
+                <td class="td_infoR" style="text-align: center; vertical-align: middle">
+                    <p style="margin-bottom: -25px;" class = "info_text">Josipa Topleka 16, Šenkovec</p>
+                    <p style="margin-bottom: -25px;" class = "info_text">40 000 Čakovec</p>
+                    <p class = "info_text">Hrvatska</p>
+                </td>
+            </tr>
+            <tr class="tr_info">
+                <td class="td_infoR" style="text-align: center; vertical-align: middle">
+                    <p style="margin-bottom: -25px;" class = "info_text">dental-craft.hr</p>
+                    <p style="margin-bottom: -25px;" class = "info_text">info@dental-craft.hr</p>
+                    <p class = "info_text">+385 99 336 8253</p>
+                </td>
+                <td class="td_infoL" style="text-align: center; vertical-align: middle">
+                    <img src="images/contact.png" class = "info_pic">
+                </td>
+            </tr>
+
+            <tr class="tr_info">
+            
+                <td class="td_infoR" style="text-align: center; vertical-align: middle">
+                    <img src="images/clock.png" class = "info_pic">
+                    
+                </td>
+                <td class="td_infoL" style="text-align: center; vertical-align: middle">
+                    <p style="margin-bottom: -25px; " class = "info_text">Radno vrijeme:</p>
+                    <p style="margin-bottom: -25px;" class = "info_text">Ponedjeljak - Petak</p>
+                    <p class = "info_text">7:00 - 15:00</p>
+                </td>
+            </tr>
+        </table>
+    
+
+
+        <!--<p> Josipa Topleka 16, Šenkovec </p>
+        <p> 40000, Čakovec, Hrvatska </p>
+        <p> info@dental-craft.hr </p>-->
+
+   
+    
+    
+    <img id="tooth7" src="images/broken_1.png"
+        style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth8" src="images/fix_1.png"
+        style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
+    <img id="tooth9" class="tooth" src="images/new_2.png"
+        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+
+</div>
+</div>
+   
+
+</body>
+
+</html>
+
+<h1 class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size: 80px; color: whitesmoke;">
+    Kako do nas?</h1>

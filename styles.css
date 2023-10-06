@@ -1,0 +1,176 @@
+@font-face {
+    font-family: Mont_L;
+    src: url(Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Ramillas;
+    src: url(TT_Ramillas_Trial_Black2.ttf);
+}
+@font-face {
+    font-family: Mont_H;
+    src: url(Mont-HeavyDEMO.otf);
+}
+@font-face {
+    font-family: Mont;
+    src: url(Mont-ExtraLightDEMO.otf);
+}
+.main_div{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;       
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main_div::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    /*font-family: Outfit Variablefont Wght, sans-serif;*/
+    font-family: Mont_L;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+.screen_page{
+    scroll-snap-align: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.blue{
+    background-color: #1b9dbb;
+}
+.darkblue{
+    background-color: #093046;
+}
+
+.head_info{
+    height: 10%;
+    font-family: Mont;
+    font-weight: 100;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+
+
+.head_text{
+    float: right;
+    margin-top: 1.5%;
+    margin-right: 7%;
+    color: whitesmoke;
+    font-size: large;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.head_text:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:
+        whitesmoke;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    cursor: pointer;
+}
+
+.head_text:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    cursor: pointer;
+}
+.btn{
+    position: absolute;
+        right: 7%;
+        bottom: 20%;
+        height: 5%;
+        width: 7%;
+        background-color: whitesmoke;
+        color: #1b9dbb;
+        border-radius: 25px;
+        border-width: 0;
+        text-align: center;
+        font-family: Mont;
+        font-size: 20px;
+}
+.btn:hover{
+    background-color: #093046;
+    color: whitesmoke;
+    cursor: pointer;
+    transition-duration: 0.6s;
+}
+
+.info_titles{
+    font-family: Ramillas;
+    font-size: 120px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: whitesmoke;
+}
+
+
+.prothetics_title{
+    font-size: 190%;
+    color: #e7df1e;
+    font-family: Mont_H;
+}
+
+.prothetics_paragraph{
+    font-family: Mont_L;
+    font-size: 18px;
+    font-weight: 400;
+    color: whitesmoke;
+
+}
+
+.prothetics_div{
+    position: absolute;
+    top: 30%;
+}
+
+.tooth{
+    transition: opacity 0.5s linear;
+}
+
+.tr_info{
+    height: 15%;
+    vertical-align: middle;
+}
+
+.info_text{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info_pic{
+    height: 130px;
+}

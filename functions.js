@@ -51,3 +51,21 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 
+
+function jumpto(sender){
+    if(sender.id == "usluge_click")
+    {   
+        const element = document.getElementById("s2");
+        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+    else if(sender.id == "info_click")
+    {   
+        const element = document.getElementById("s2");
+        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+    else if(sender.id == "kontakt_click")
+    {   
+        const element = document.getElementById("s3");
+        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+}

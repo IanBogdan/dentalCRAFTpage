@@ -51,8 +51,9 @@ body{
     position: relative;
     height: 100vh;
     width: 100vw;
+    margin: 0px;
+    padding: 0px;
 }
-
 .blue{
     background-color: #1b9dbb;
 }
@@ -61,22 +62,24 @@ body{
 }
 
 .head_info{
-    height: 10%;
-    width: 100%;
+    height: 10vh;
     font-family: Mont;
     font-weight: 100;
 }
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%
+    width: 10vw;
 }
+
+
 
 .head_text{
     float: right;
-    margin-top: 1.5%;
-    margin-right: 7%;
+    margin-top: 1.5vh;
+    margin-right: 7vw;
     color: whitesmoke;
+    font-size: large;
     text-decoration: none;
     position: relative;
     cursor: pointer;
@@ -85,7 +88,7 @@ body{
 .head_text:after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 100vw;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
@@ -104,17 +107,17 @@ body{
 }
 .btn{
     position: absolute;
-        right: 7%;
-        bottom: 20%;
-        height: 5%;
-        width: 7%;
+        right: 7vw;
+        bottom: 20vh;
+        height: 5vh;
+        width: 7vw;
         background-color: whitesmoke;
         color: #1b9dbb;
         border-radius: 25px;
         border-width: 0;
         text-align: center;
         font-family: Mont;
-        font-size: 1vw;
+        font-size: 20px;
 }
 .btn:hover{
     background-color: #093046;
@@ -125,21 +128,21 @@ body{
 
 .info_titles{
     font-family: Ramillas;
-    font-size: 6vw; /*750%;/*120px;*/
+    font-size: 120px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: whitesmoke;
 }
 
 
 .prothetics_title{
-    font-size: 1.59vw;
+    font-size: 190%;
     color: #e7df1e;
     font-family: Mont_H;
 }
 
 .prothetics_paragraph{
     font-family: Mont_L;
-    font-size: 1vw;
+    font-size: 18px;
     font-weight: 400;
     color: whitesmoke;
 
@@ -147,7 +150,7 @@ body{
 
 .prothetics_div{
     position: absolute;
-    top: 30%;
+    top: 30vh;
 }
 
 .tooth{
@@ -155,20 +158,19 @@ body{
 }
 
 .tr_info{
-    height: 15%;
+    height: 15vh;
     vertical-align: middle;
 }
 
 .info_text{
     color: whitesmoke;
     text-align: center;
-    font-size: 3vh;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
 .info_pic{
-    height: 60%;
-    width: 37%;
+    height: 130px;
 }

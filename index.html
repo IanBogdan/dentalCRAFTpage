@@ -2,12 +2,14 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dentalCRAFT</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="functions.js"></script>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRHfreQQkqHekIMfpVNVJzppV8QhFGpU4&callback=console.debug&libraries=maps,marker&v=beta">
         </script>
+   
  
 </head>
 
@@ -15,17 +17,17 @@
 <div class="main_div">
 <div id="s1" class="screen_page blue">
     <div class="head_info">
-        <img src="images/logo.svg" style="max-height: 35%; margin-left: 5%; margin-top: 1%;" />
-        <p class="head_text" style= "font-size:20px;"> Kontakt </p>
-        <p class="head_text" style= "font-size:20px;"> O nama </p>
+        <img src="images/logo.svg" style="height: 35%; width:15%; margin-left: 5%; margin-top: 1%;" />
+        <p id = "kontakt_click" class="head_text" style= "font-size:2.3vh;" onclick="jumpto(this)"> Kontakt </p>
+        <p id = "info_click" class="head_text" style= "font-size:2.3vh;"  onclick="jumpto(this)"> O nama </p>
     </div>
 
-    <img src="images/hero.png" style="height: 65%; position: absolute; bottom: 0%; left: 10%" />
-    <img src="images/tooth.gif" style="height: 55%; position: absolute; left: 27%; top: 1%;" />
+    <img src="images/hero.png" style="height: 65%; width:30%; position: absolute; bottom: 0%; left: 10%" />
+    <img src="images/tooth.gif" style="height: 55%; width:30%; position: absolute; left: 27%; top: 1%;" />
 
     <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 30%;"> Vaši zubi </h1>
     <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 17%;"> u pravim rukama </h1>
-    <button class="btn"> <b> Usluge </button>
+    <button id  = "usluge_click" class="btn" onclick="jumpto(this)"> <b> Usluge </button>
 
     <img id="tooth1" class = "tooth" src="images/broken_2.png"
         style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
@@ -36,7 +38,7 @@
 </div>
 
 <div id="s2" class="screen_page darkblue">
-    <h1 class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size:  80px;">Što radimo?</h1>
+    <h1 class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size:  9vh;">Što radimo?</h1>
 
     <div style="position: absolute; top: 29%; left: 12%; width: 15%; height: 50%; padding: 0%; margin: 0%;">
         <img src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
@@ -99,9 +101,9 @@
             <gmp-advanced-marker position="46.4111328125,16.415279388427734">
             </gmp-advanced-marker>
         </gmp-map>
-        <table style="position: absolute; top: 50px; height: 55%; width: 35%; left: 52%; font-size: 19px; color: whitesmoke;">
+        <table style="position: absolute; top: 3%; height: 55%; width: 35%; left: 52%; font-size: 1vw; color: whitesmoke;">
                     <caption>
-                        <h1 class="info_titles" style="font-size: 80px; color: whitesmoke;padding-top: 50px;">
+                        <h1 class="info_titles" style="font-size: 4.2vw; color: whitesmoke;padding-top: 50px;">
                         Kako do nas?</h1>
                     </caption>
               
@@ -110,15 +112,15 @@
                     <img src="images/pin.png" class = "info_pic">
                 </td>
                 <td class="td_infoR" style="text-align: center; vertical-align: middle">
-                    <p style="margin-bottom: -25px;" class = "info_text">Josipa Topleka 16, Šenkovec</p>
-                    <p style="margin-bottom: -25px;" class = "info_text">40 000 Čakovec</p>
+                    <p style="margin-bottom: -6%;" class = "info_text">Josipa Topleka 16, Šenkovec</p>
+                    <p style="margin-bottom: -6%;" class = "info_text">40 000 Čakovec</p>
                     <p class = "info_text">Hrvatska</p>
                 </td>
             </tr>
             <tr class="tr_info">
                 <td class="td_infoR" style="text-align: center; vertical-align: middle">
-                    <p style="margin-bottom: -25px;" class = "info_text">dental-craft.hr</p>
-                    <p style="margin-bottom: -25px;" class = "info_text">info@dental-craft.hr</p>
+                    <p style="margin-bottom: -6%;" class = "info_text">dental-craft.hr</p>
+                    <p style="margin-bottom: -6%;" class = "info_text">info@dental-craft.hr</p>
                     <p class = "info_text">+385 99 336 8253</p>
                 </td>
                 <td class="td_infoL" style="text-align: center; vertical-align: middle">
@@ -139,7 +141,7 @@
                 </td>
             </tr>
         </table>
-    
+
 
 
         <!--<p> Josipa Topleka 16, Šenkovec </p>

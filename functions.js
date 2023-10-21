@@ -7,26 +7,35 @@ function scrollToNextSection() {
     location.hash = "#" + sections[currentSectionIndex].id;
 }
 
-function change_teeth(arr){
-    for(var i = 1; i<10; i++)
-     {
-        if(arr.includes(i))
-            document.getElementById("tooth" + i).src = "images/broken_1.png";
-        else document.getElementById("tooth" + i).src = "images/broken_2.png";
-     }
+
+function open_screen(){
+    document.getElementById("s1.5").style.display = "block";
+    const element = document.getElementById("s1.5");
+    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+    
+}
+
+
+var a1 = ["broken_", "fixed_", "new_"]
+function change_teeth(num){
+    
+    for(var i = 1; i<4; i++)
+     document.getElementById("tooth" + i).src = "images/" + a1[i-1] + "1.png";
+    document.getElementById("tooth" + num).src = "images/" + a1[num-1] + "2.png";
 }
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
   if (entry.isIntersecting) {
-    if(entry.target.id == "broken_1.png"){
-        change_teeth([1]);
+    if(entry.target.id == "logo_img"){
+        change_teeth(1);
     }
-    else if(entry.target.id == "implant_1.png"){
-        change_teeth([4,5]);
+    else if(entry.target.id == "fiksna_img"){
+        change_teeth(2);
     }
-    else if(entry.target.id == "fix_1.png"){
-        change_teeth([7,8,9]);
+    else if(entry.target.id == "info_img"){
+        change_teeth(3);
     }
   }
 });
@@ -36,7 +45,7 @@ const observer = new IntersectionObserver(entries => {
 function init(){
     sections = document.getElementsByClassName('screen_page');
     // Tell the observer which elements to track
-    document.querySelectorAll('.tooth').forEach(element => {
+    document.querySelectorAll('img').forEach(element => {
          observer.observe(element);
     });
    

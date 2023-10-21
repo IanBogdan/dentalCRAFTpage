@@ -152,6 +152,7 @@ body{
 
 .tooth{
     transition: opacity 0.5s linear;
+    position: fixed;
 }
 
 .tr_info{

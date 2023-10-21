@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="functions.js"></script>
     <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Vv13lbAXCSkV595r3t2jH_qK7e2wptM&callback=console.debug&libraries=maps,marker&v=beta">
-        </script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRHfreQQkqHekIMfpVNVJzppV8QhFGpU4M&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
    
  
 </head>
@@ -17,28 +17,39 @@
 <div class="main_div">
 <div id="s1" class="screen_page blue">
     <div class="head_info">
-        <img src="images/logo.svg" style="height: 35%; width:15%; margin-left: 5%; margin-top: 1%;" />
+        <img id = "logo_img" src="images/logo.svg" style="height: 35%; width:15%; margin-left: 5%; margin-top: 1%;" />
         <p id = "kontakt_click" class="head_text" style= "font-size:2.3vh;" onclick="jumpto(this)"> Kontakt </p>
-        <p id = "info_click" class="head_text" style= "font-size:2.3vh;"  onclick="jumpto(this)"> O nama </p>
+        <p id = "info_click" class="head_text" style= "font-size:2.3vh;"  onclick="open_screen()"> O nama </p>
     </div>
 
     <img src="images/hero.png" style="height: 65%; width:30%; position: absolute; bottom: 0%; left: 10%" />
     <img src="images/tooth.gif" style="height: 55%; width:30%; position: absolute; left: 27%; top: 1%;" />
 
-    <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 30%;"> Vaši zubi </h1>
+    <h1 id = "title1" class="info_titles" style="position: absolute; right: 7%; bottom: 30%;"> Vaši zubi </h1>
     <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 17%;"> u pravim rukama </h1>
     <button id  = "usluge_click" class="btn" onclick="jumpto(this)"> <b> Usluge </button>
 
-    <img id="tooth1" class = "tooth" src="images/broken_2.png"
-        style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
-    <img id="tooth2" src="images/fix_1.png"
-        style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
-    <img id="tooth3" src="images/new_1.png"
-        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+    
+</div>
+<img id="tooth1" class="tooth" src="images/broken_1.png" style="bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
+<img id="tooth2" class="tooth" src="images/fix_1.png" style="bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
+<img id="tooth3" class="tooth" src="images/new_1.png" style=" bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+<div id="s1.5" class="screen_page blue" style="display: none;">
+    <!--<ol>
+        <li><span>Classic</span></li>
+        <li><span>The Burning Crusade</span></li>
+        <li class="active"><span>Wrath of the Lich King</span></li>
+        <li><span>Cataclysm</span></li>
+        <li><span>Mists of Pandaria</span></li>
+        <li><span>Warlords of Draenor</span></li>
+        <li><span>Legion</span></li>
+        <li><span>Battle for Azeroth</span></li>
+        <li><span>Shadowlands</span></li>
+    </ol>-->
 </div>
 
 <div id="s2" class="screen_page darkblue">
-    <h1 class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size:  9vh;">Što radimo?</h1>
+    <h1 id = "title2" class="info_titles" style="margin: 0px; padding-top: 4%; text-align: center; font-size:  9vh;">Što radimo?</h1>
 
     <div style="position: absolute; top: 29%; left: 12%; width: 15%; height: 50%; padding: 0%; margin: 0%;">
         <img src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
@@ -64,7 +75,7 @@
 
 
     <div style="position: absolute; top: 29%; right: 32%; width: 15%; height: 50%; padding: 0%; margin: 0%;">
-        <img src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
+        <img id = "fiksna_img" src="images/Fiksna2x.png" style="position: absolute; width: 100%;" />
         <b>
             <p class="prothetics_title" style="position: absolute; top: 32%; left: 10%; "> Implantologija </p>
         </b>
@@ -88,12 +99,12 @@
             Bez obzira trebate li fiksnu protetiku, mobilnu zubnu protetiku, zubne implantate ili kombinaciju ovoga, mi vam možemo pomoći. 
             Preciznim mjerenjima, preciznim otiscima i korištenjem visokokvalitetnih materijala, osiguravamo savršeno pristajanje, trajnost i prirodnu estetiku. </p>
     </div>
-    <img id="tooth4" src="images/broken_1.png"
+    <!--<img id="tooth4" src="images/broken_1.png"
         style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
     <img id="tooth5" class="tooth" src="images/fix_2.png"
         style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
     <img id="tooth6" src="images/new_1.png"
-        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />-->
 </div>
 
 <div id="s3" class="screen_page blue">
@@ -103,13 +114,13 @@
         </gmp-map>
         <table style="position: absolute; top: 3%; height: 55%; width: 35%; left: 52%; font-size: 1vw; color: whitesmoke;">
                     <caption>
-                        <h1 class="info_titles" style="font-size: 4.2vw; color: whitesmoke;padding-top: 50px;">
+                        <h1 id = "title3" class="info_titles" style="font-size: 4.2vw; color: whitesmoke;padding-top: 50px;">
                         Kako do nas?</h1>
                     </caption>
               
             <tr class="tr_info">
                 <td class="td_infoL" style="text-align: center; vertical-align: middle">
-                    <img src="images/pin.png" class = "info_pic">
+                    <img id = "info_img" src="images/pin.png" class = "info_pic">
                 </td>
                 <td class="td_infoR" style="text-align: center; vertical-align: middle">
                     <p style="margin-bottom: -6%;" class = "info_text">Josipa Topleka 16, Šenkovec</p>
@@ -152,12 +163,12 @@
    
     
     
-    <img id="tooth7" src="images/broken_1.png"
+    <!--<img id="tooth7" src="images/broken_1.png"
         style="position: absolute; bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
     <img id="tooth8" src="images/fix_1.png"
         style="position: absolute; bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
     <img id="tooth9" class="tooth" src="images/new_2.png"
-        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+        style="position: absolute; bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />-->
 
 </div>
 </div>

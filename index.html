@@ -19,7 +19,7 @@
 <div id="s1" class="screen_page blue">
     <div class="head_info">
         <img id = "logo_img" src="images/logo.svg" style="height: 35%; width:15%; margin-left: 5%; margin-top: 1%;" />
-        <p id = "kontakt_click" class="head_text" style= "font-size:2.3vh;" onclick="jumpto(this)"> Kontakt </p>
+        <p id = "kontakt_click" class="head_text" style= "font-size:2.3vh;" onclick="jumpto('kontakt_click')"> Kontakt </p>
         <p id = "info_click" class="head_text" style= "font-size:2.3vh;"  onclick="open_screen()"> O nama </p>
     </div>
 
@@ -28,13 +28,13 @@
 
     <h1 id = "title1" class="info_titles" style="position: absolute; right: 7%; bottom: 30%;"> Vaši zubi </h1>
     <h1 class="info_titles" style="position: absolute; right: 7%; bottom: 17%;"> u pravim rukama </h1>
-    <button id  = "usluge_click" class="btn" onclick="jumpto(this)"> <b> Usluge </button>
+    <button id  = "usluge_click" class="btn" onclick="jumpto('usluge_click')"> <b> Usluge </button>
 
     
 </div>
-<img id="tooth1" class="tooth" src="images/broken_1.png" style="bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
-<img id="tooth2" class="tooth" src="images/fix_1.png" style="bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
-<img id="tooth3" class="tooth" src="images/new_1.png" style=" bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
+<img id="tooth1" class="tooth" src="images/broken_1.png" onclick="jumpto('start_click')" style="bottom: 52%; right: 1%; height: 5%; z-index: 3000;" />
+<img id="tooth2" class="tooth" src="images/fix_1.png" onclick="jumpto('usluge_click')" style="bottom: 45%; right: 1%; height: 5%; z-index: 3000;" />
+<img id="tooth3" class="tooth" src="images/new_1.png" onclick="jumpto('kontakt_click')" style=" bottom: 38%; right: 1%; height: 5%; z-index: 3000;" />
 <div id="s15" class="screen_page blue" style="display: none;">
     <h1 id="title2" class="info_titles" style="margin: 0px; padding-top: 6%; text-align: center; font-size:  9vh;">O nama</h1>
 <section class="cd-horizontal-timeline">

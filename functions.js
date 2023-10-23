@@ -62,21 +62,22 @@ function myMap() {
 
 
 function jumpto(sender){
-    if(sender.id == "usluge_click")
+    if(sender == "usluge_click")
     {   
         const element = document.getElementById("s2");
         element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
-    else if(sender.id == "info_click")
+    else if(sender == "start_click")
     {   
-        const element = document.getElementById("s2");
+        const element = document.getElementById("s1");
         element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
-    else if(sender.id == "kontakt_click")
+    else if(sender == "kontakt_click")
     {   
         const element = document.getElementById("s3");
         element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
+
 }
 
 //From https://codyhouse.co/gem/horizontal-timeline/

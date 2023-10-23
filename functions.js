@@ -228,6 +228,7 @@ jQuery(document).ready(function($){
 		updateTimelinePosition('next', timelineComponents['eventsWrapper'].find('a.selected'), timelineComponents);
 	
 		return totalWidth;
+	
 	}
 
 	function updateVisibleContent(event, eventsContent) {

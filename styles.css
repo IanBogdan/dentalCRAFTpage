@@ -411,11 +411,10 @@ Main Components
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(-90deg);
     height: 34px;
     width: 34px;
-    border-radius: 50%;
-    border: 2px solid #dfdfdf;
+  
     /* replace text with an icon */
     overflow: hidden;
     color: #000;
@@ -424,6 +423,9 @@ Main Components
     -webkit-transition: border-color 0.3s;
     -moz-transition: border-color 0.3s;
     transition: border-color 0.3s;
+    background-image: url("images/arr2.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .cd-timeline-navigation a::after {
@@ -441,7 +443,6 @@ Main Components
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url('images/pointer.png') no-repeat 0 0;
 }
 
 .cd-timeline-navigation a.prev {
@@ -450,7 +451,8 @@ Main Components
     -moz-transform: translateY(-50%) rotate(180deg);
     -ms-transform: translateY(-50%) rotate(180deg);
     -o-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(90deg);
+ 
 }
 
 .cd-timeline-navigation a.next {
@@ -462,7 +464,7 @@ Main Components
 }
 
 .cd-timeline-navigation a.inactive {
-    cursor: not-allowed;
+    display: none;
 }
 
 .cd-timeline-navigation a.inactive::after {
@@ -568,8 +570,12 @@ Main Components
     
 }
 
-.cd-horizontal-timeline .events-content em::before {
-    content: '- ';
+.cd-horizontal-timeline .events-content li h2{
+    font-size: 350%;
+}
+
+.cd-horizontal-timeline .events-content em {
+    font-weight: 1000;
 }
 
 .cd-horizontal-timeline .events-content p {

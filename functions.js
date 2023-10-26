@@ -11,9 +11,7 @@ function scrollToNextSection() {
 function open_screen(){
     document.getElementById("s15").style.display = "block";
     const element = document.getElementById("s15");
-    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-
-    
+	element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
 
@@ -25,30 +23,38 @@ function change_teeth(num){
     document.getElementById("tooth" + num).src = "images/" + a1[num-1] + "2.png";
 }
 
+var current_observed = "s1";
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
   if (entry.isIntersecting) {
     if(entry.target.id == "logo_img"){
+		current_observed = "s1";
         change_teeth(1);
     }
     else if(entry.target.id == "fiksna_img"){
+		current_observed = "s2"
         change_teeth(2);
     }
     else if(entry.target.id == "info_img"){
+		current_observed = "s3";
         change_teeth(3);
     }
+	if(current_observed != entry.target.id) $('#s15').fadeOut();
   }
 });
 
 });
 
+function scroll_fun(){
+
+}
 function init(){
     sections = document.getElementsByClassName('screen_page');
     // Tell the observer which elements to track
     document.querySelectorAll('img').forEach(element => {
          observer.observe(element);
-    });
-   
+    });	
 }
 
 
@@ -256,6 +262,7 @@ jQuery(document).ready(function($){
 
 	function updateOlderEvents(event) {
 		event.parent('li').prevAll('li').children('a').addClass('older-event').end().end().nextAll('li').children('a').removeClass('older-event');
+		event.removeClass('older-event');
 	}
 
 	function getTranslateValue(timeline) {
